@@ -18,7 +18,7 @@ public class KafkaConsumer {
     @KafkaListener(
             topics = "message-ack",
             containerFactory = "kafkaListenerWithAckContainerFactory")
-    public void greetingListener(@Payload String message, Acknowledgment acknowledgment) {
+    public void kafkaListenerWithAck(@Payload String message, Acknowledgment acknowledgment) {
 
         System.out.println("Received message: " + message);
 
